@@ -1,0 +1,79 @@
+<div data-page="enjoyo2odetail" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="index.html" class="back link">
+                    <i class="icon icon-back"></i><span>返回</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 搜索栏 -->
+    <form data-search-list=".list-block-search" data-search-in=".item-time" class="searchbar searchbar-init">
+        <div class="searchbar-input">
+            <input type="search" placeholder="Search">
+            <a href="#" class="searchbar-clear"></a>
+        </div><a href="#" class="searchbar-cancel">Cancel</a>
+    </form>
+
+    <!-- 搜索栏覆盖区-->
+    <div class="searchbar-overlay"></div>
+    <!-- 搜索没有结果时显示 -->
+    <div class="page-content">
+        <!-- 没有找到 -->
+        <div class="content-block searchbar-not-found">
+            <div class="content-block-inner">没有找到</div>
+        </div>
+        <!-- 展示找到的结果 -->
+        <div class="list-block list-block-search searchbar-found accordion-list">
+            <ul>
+              <li class="accordion-item">
+                  <a href="#" class="item-content item-link">
+                      <div class="item-inner">
+                          <div class="item-time">立体几何公理</div>
+                      </div>
+                  </a>
+                  <div class="accordion-item-content">
+                      <div class="content-block">
+                          <p>立体几何</p>
+                      </div>
+                  </div>
+              </li>
+                <li class="accordion-item">
+                    <a href="#" class="item-content item-link">
+                        <div class="item-inner">
+                            <div class="item-time">哈迪斯</div>
+                        </div>
+                    </a>
+                    <div class="accordion-item-content">
+                        <div class="content-block">
+                            <p>希腊神话里的冥王</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content">
+                    <div class="item-inner">
+                        <div class="item-time">Audi</div>
+                    </div>
+                </li>
+                <li class="item-content">
+                    <div class="item-inner">
+                        <div class="item-time">阿波罗</div>
+                    </div>
+                </li>
+                <li class="item-content">
+                    <div class="item-inner">
+                        <div class="item-time">海格力斯</div>
+                    </div>
+                </li>
+                <li class="item-content">
+                    <div class="item-inner">
+                        <div class="item-time">错题1</div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,316 @@
+$def with (math,weiqi,eng)
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- 元数据tag-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- 标题 -->
+  <title>App</title>
+  <!-- Framework7  CSS 路径 -->
+  <link rel="stylesheet" href="../static/css/framework7.ios.min.css">
+  <!-- Framework7 color 路径  -->
+  <link rel="stylesheet" href="../static/css/framework7.ios.colors.min.css">
+  <!-- 图标库 -->
+  <link rel="stylesheet" href="../static/css/framework7-icons.css">
+
+  <!-- <link href="//vjs.zencdn.net/5.11/video-js.min.css" rel="stylesheet"> -->
+  <link href="../static/css/video-js.min.css" rel="stylesheet">
+
+  <!-- 自定义css-->
+  <link rel="stylesheet" href="../static/css/my-app.css">
+</head>
+
+<body>
+
+  <!-- 全屏模式下的Status bar 覆盖层 (PhoneGap) -->
+  <div class="statusbar-overlay"></div>
+  <!-- 视图容器 -->
+  <div class="views tabs navbar-through toolbar-through">
+    <!-- 主视图  -->
+    <div id="tab-main" class="view view-main tab active">
+
+      <!-- 页面容器 采用fixed toolbar-->
+      <div class="pages">
+
+        <!-- 页面 -->
+        <div data-page="main" class="page">
+          <!-- 铅笔图位置 -->
+          <div class="pencil"></div>
+          <!-- 色格包围框 -->
+          <div class="color-rectangle">
+            <!-- 页面内容 -->
+            <!-- 第一行色格 -->
+            <div class="row no-gutter">
+              <!-- 学习资源 -->
+              <div class="resource col-50 row-16">
+                <ul>
+                  <li><a href="resource.html" class="icon-resource">学习资源</a></li>
+                </ul>
+              </div>
+              <!-- 问卷 -->
+              <div class="survey col-50 row-16">
+                <ul>
+                  <li><a href="#" class="icon-survey">问卷</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 第二行色格 -->
+            <div class="row no-gutter">
+              <!-- 在线测试 -->
+              <div class="exam col-50 row-16">
+                <ul>
+                  <li><a href="olexam.html" class="icon-exam">在线测试</a></li>
+                </ul>
+              </div>
+              <!-- 课堂测验及答案 -->
+              <div class="answer col-50 row-16">
+                <ul>
+                  <li><a href="#" class="icon-answer">课堂测验及答案</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 第三行色格 -->
+            <div class="row no-gutter">
+              <!-- 交流群 -->
+              <div class="community col-50 row-16">
+                <ul>
+                  <li><a href="#" class="icon-community">交流群</a></li>
+                </ul>
+              </div>
+              <!-- 历史测验题 -->
+              <div class="hisexam col-50 row-16">
+                <ul>
+                  <li><a href="#" class="icon-hisexam">历史测验题</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- 第四行色格 -->
+            <div class="row no-gutter">
+              <!-- 错题集 -->
+              <div class="errors col-50 row-16">
+                <ul>
+                  <li><a href="error_set.html" class="icon-errors">错题集</a></li>
+                </ul>
+              </div>
+              <!-- 教材 -->
+              <div class="teaching col-50 row-16">
+                <ul>
+                  <li><a href="#" class="icon-teaching">教材</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 第二个视图 -->
+    <div id="tab-second" class="view tab ">
+      <!-- 页面容器 采用fixed toolbar-->
+      <div class="pages">
+        <!-- 页面 -->
+        <div data-page="main" class="page no-navbar">
+          <!-- 页面内容 -->
+          <div class="page-content">
+            <div class="list-block">
+              <!-- 数学 -->
+
+                <div class="list-group">
+                  <ul>
+                      <li class="list-group-title"> 数学 </li>
+                      $for i in math:
+                        <li class="item-content">
+                          <div class="item-media"><i class="f7-icons">play</i></div>
+                          <div class="item-inner">
+                            <div class="item-title"><a href="videodetail.html?id=$i[0]"> $i[3] </a></div>
+                            <div class="item-after"> $i[2] </div>
+                          </div>
+                        </li>
+                  </ul>
+                </div>
+                <!-- 围棋 -->
+
+                  <div class="list-group">
+                    <ul>
+                        <li class="list-group-title"> 围棋 </li>
+                        $for i in weiqi:
+                          <li class="item-content">
+                            <div class="item-media"><i class="f7-icons">play</i></div>
+                            <div class="item-inner">
+                              <div class="item-title"><a href="videodetail.html?id=$i[0]"> $i[3] </a></div>
+                              <div class="item-after"> $i[2] </div>
+                            </div>
+                          </li>
+                    </ul>
+                  </div>
+
+                  <!-- 英语 -->
+
+                    <div class="list-group">
+                      <ul>
+                          <li class="list-group-title"> 英语 </li>
+                          $for i in eng:
+                            <li class="item-content">
+                              <div class="item-media"><i class="f7-icons">play</i></div>
+                              <div class="item-inner">
+                                <div class="item-title"><a href="videodetail.html?id=$i[0]"> $i[3] </a></div>
+                                <div class="item-after"> $i[2] </div>
+                              </div>
+                            </li>
+                      </ul>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 第三个视图 -->
+    <div id="tab-third" class="view tab">
+      <!-- 页面容器 采用fixed toolbar-->
+      <div class="pages">
+        <!-- 页面 -->
+        <div data-page="main" class="page no-navbar">
+          <!-- 页面内容 -->
+          <div class="page-content">
+
+            <div class="content-block-title">英语</div>
+            <div class="card pic">
+              <div style="background-image:url(../static/img/j2.png)" valign="bottom" class="card-header color-white no-border">Journey To Mountains</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="link">赞</a>
+                <a href="#" class="link">更多</a>
+              </div>
+            </div>
+
+            <div class="content-block-title">围棋</div>
+            <div class="card pic">
+              <div style="background-image:url(../static/img/g.jpg)" valign="bottom" class="card-header color-white no-border">最强人类能否狙击AlphaGo 2.0</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <p>本次AlphaGo挑战柯洁九段的比赛，将于5月下旬在中国乌镇举行，整个活动将进行5天。让我们来探知AlphaGo独特的布局和战术。</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="link">赞</a>
+                <a href="#" class="link">更多</a>
+              </div>
+            </div>
+
+            <div class="content-block-title">摄影</div>
+            <div class="card pic">
+              <div style="background-image:url(../static/img/j3.png)" valign="bottom" class="card-header color-white no-border">如何才能拍出好照片？</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <p>北极光熠熠生辉，赶快用你手里的相机记录此刻此景。什么？摄影小白？看完这篇文章就没问题啦。</p>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="link">赞</a>
+                <a href="#" class="link">更多</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- 第四个视图 -->
+    <div id="tab-fourth" class="view tab">
+      <div class="pages">
+        <div class="page no-navbar no-toolbar" data-page="main">
+          <!-- <div class="page-content"> -->
+
+          <!-- <div data-page="login-screen" class="page no-navbar no-toolbar no-swipeback"> -->
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Enjoyo2o</div>
+            <form>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">用户名</div>
+                      <div class="item-input">
+                        <input type="text" name="username" placeholder="你的用户名" id="login_username" />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">密码</div>
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="你的密码" id="login_password" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-block login_block">
+                <ul>
+                  <li><a href="#" class="item-link list-button" id="login_button">登录</a></li>
+                </ul>
+                <div class="list-block-label">
+                  <a href="signup.html" class="item-link list-button">新用户？点击注册</a>
+                </div>
+              </div>
+
+              <div class="list-block login_after">
+                <ul>
+                  <li>
+                    <div class="item-link list-button login_after_block"></div>
+                  </li>
+                </ul>
+                <div class="list-block-label">
+                  <a href="#" class="item-link list-button logout_button">点此注销</a>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- </div> -->
+
+
+          <!-- </div> -->
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="toolbar tabbar tabbar-labels">
+      <div class="toolbar-inner">
+        <a href="#tab-main" class="tab-link active">
+          <i class="f7-icons">home</i><span class="tabbar-label">学习</span>
+        </a>
+        <a href="#tab-second" class="tab-link">
+          <i class="f7-icons">play</i><span class="tabbar-label">视频</span>
+        </a>
+        <a href="#tab-third" class="tab-link">
+          <i class="f7-icons">folder</i><span class="tabbar-label">题库</span>
+        </a>
+        <a href="#tab-fourth" class="tab-link">
+          <i class="f7-icons">persons</i><span class="tabbar-label">我的</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Path to Framework7 Library-->
+  <script type="text/javascript" src="../static/js/framework7.min.js"></script>
+  <script src="../static/js/jquery-3.2.1.min.js"></script>
+  <script src="../static/js/video.min.js"></script>
+  <script src="../static/js/cookie.js"></script>
+  <script type="text/javascript" src="../static/js/my-app.js"></script>
+  <script type="text/template7" id="template">
+  </script>
+</body>
+
+</html>

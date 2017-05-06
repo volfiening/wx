@@ -1,0 +1,286 @@
+body {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+}
+
+.pencil {
+  width: 100%;
+  background-image: url(../img/pencil.jpg);
+  height: 33.34%;
+  background-position: left;
+  background-size: cover;
+}
+
+.row {
+  height: 16.67%;
+}
+
+.row-16 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+
+/*--色块显示*/
+
+.row.no-gutter ul {
+  margin: 0 auto;
+  padding: 0;
+  /*居中对齐*/
+  /*width: 30.8em;*/
+  width: 100%;
+}
+
+.row.no-gutter ul li {
+  /*width: 400px;
+    padding: 12px 20px 10px 17px;*/
+  list-style: none;
+  display: inline;
+  /*li居中要素*/
+}
+
+.row.no-gutter ul li a {
+  display: block;
+  padding-top: 3.4em;
+  height: 3.2em;
+  line-height: 3.2em;
+  color: white;
+}
+
+
+/*----色块显示结束*/
+
+.color-rectangle {
+  height: 91.9%;
+}
+
+
+/*学习资源*/
+
+.icon-resource {
+  background: url(../img/xuexi.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.resource {
+  background: rgb(36, 9, 44);
+}
+
+
+/*问卷*/
+
+.icon-survey {
+  background: url(../img/wenjuan.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.survey {
+  background: rgb(49, 10, 31);
+}
+
+
+/*在线测试*/
+
+.icon-exam {
+  background: url(../img/ceshi.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.exam {
+  background: rgb(162, 55, 73);
+}
+
+
+/*课堂测验及答案*/
+
+.icon-answer {
+  background: url(../img/ceyan.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.answer {
+  background: rgb(224, 101, 85);
+}
+
+
+/*交流群*/
+
+.icon-community {
+  background: url(../img/jiaoliu.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.community {
+  background: rgb(230, 161, 119);
+}
+
+
+/*历史测验题*/
+
+.icon-hisexam {
+  background: url(../img/lishi.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.hisexam {
+  background: rgb(232, 74, 45);
+}
+
+
+/*错题集*/
+
+.icon-errors {
+  background: url(../img/cuoti.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.errors {
+  background: rgb(217, 114, 55);
+}
+
+
+/*教材*/
+
+.icon-teaching {
+  background: url(../img/jiaocai.png) no-repeat center 0;
+  background-size: 4.5em 4.5em;
+}
+
+.teaching {
+  background: rgb(216, 172, 111);
+}
+
+
+/*资源难度页面*/
+
+.hardtitle {
+  height: 100%;
+  width: 100%;
+}
+
+.hardtitle td {
+  text-align: center;
+  padding-top: 0;
+}
+
+.hardtitle td p {
+  font-size: 1.6em;
+}
+
+.basic p, .strengthen p, .improvement p {
+  color: white;
+}
+
+.round {
+  border-radius: 6em;
+  width: 12em;
+  height: 12em;
+  line-height: 9em;
+  /*td里自动对齐只需将div变成块级元素即可*/
+  display: inline-block;
+}
+
+.basic {
+  background-color: green;
+}
+
+.strengthen {
+  background-color: orange;
+}
+
+.improvement {
+  background-color: lightblue;
+}
+
+.round a {
+  color: white;
+}
+
+#my-player {
+  width: 100%;
+  height: 40%;
+}
+
+/*.item-content {
+  background-color: lightgrey;
+}*/
+
+.text {
+  list-style: none;
+  margin: 0, auto;
+  padding: 0;
+}
+
+.text textarea {
+  width: 50%;
+}
+
+.text textarea {
+  -webkit-box-shadow: 0 0 1em pink;
+  -moz-box-shadow: 0 0 1em pink;
+  box-shadow: 0 0 1em pink;
+  padding: 0;
+  margin: 0;
+  resize: none;
+}
+
+.edit {
+  display: none;
+}
+
+
+.edit .text a {
+  width: 20%;
+}
+
+.content-block-title.comment a {
+  width: 27%;
+}
+
+.pic .card-header {
+  height: 40vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.question {
+font-size: 1.5em;
+color: black;
+}
+.candidate span {
+  margin-right: .5em;
+  color: black;
+}
+
+.candidate.error span{
+  color: red;
+}
+
+.candidate.right span{
+  color: green;
+}
+
+#start {
+  margin-top: .5em;
+}
+
+
+.submitarea {
+  margin: 0 auto;
+  padding-left: 30%;
+  padding-top: 1em;
+}
+
+#submit {
+  width: 40%;
+}
+
+.timequery {
+  margin:0;
+}

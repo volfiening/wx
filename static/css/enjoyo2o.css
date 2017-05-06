@@ -1,0 +1,91 @@
+body {
+  font-size:62.5%;
+  height: 100%;
+}
+
+.enjoyo2o-pic {
+  background-image: url(../img/enjoyo2o.jpg);
+  background-size:100%;
+  background-repeat: no-repeat;
+  height: 16%;
+}
+
+.content-block-title {
+  text-align: center;
+}
+
+.content-block-title p {
+  color: green;
+  font-size: 2.6em;
+  font-weight: normal;
+  font-family: STHeiti;
+}
+
+.row {
+  margin: 2em;
+}
+.row a {
+  color: white;
+  border: 0;
+}
+
+.seven1,.eng {
+  background-color: rgb(97,101,198);
+}
+
+.seven2,.lecture {
+  background-color: rgb(117,155,238);
+}
+
+.eight1,.weiqi{
+  background-color: rgb(60,161,191);
+}
+
+.eight2,.dance {
+  background-color: rgb(210,227,121);
+}
+
+.nine1,.calligraphy {
+  background-color: rgb(232,174,111);
+}
+
+.nine2,.music {
+  background-color: rgb(230,119,136);
+}
+
+.detailcaption {
+text-align: left;
+}
+
+
+.chapter {
+  margin-bottom: 2em;
+  position: relative;
+  left:10%;
+}
+.catalog {
+  text-align: center;
+  left: 0;
+  font-size: 2.5em;
+  margin-bottom: .5em;
+}
+.catalog span {
+  margin-left:0;
+}
+
+.chapter span {
+  margin-left: 1em;
+  font-size: 2em;
+}
+.chapter a {
+  color: black;
+  font-style: oblique;
+
+}
+.catalog span {
+  margin-left:0;
+}
+
+/*.item-content {
+  background-color: red;
+}*/
