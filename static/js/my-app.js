@@ -59,7 +59,7 @@ $$(document).on('pageInit', function(e) {
           var anotherplayer = videojs('anotherplayer', {
             controls: true,
             autoplay: false,
-            preload: 'auto',
+            preload: 'metadata',
             poster: thumbnail,
             sources: [{
               src: url,
@@ -439,7 +439,7 @@ $$(document).on('pageInit', function(e) {
           var player = videojs('myplayer', {
             controls: true,
             autoplay: false,
-            preload: 'auto',
+            preload: 'metadata',
             poster: data['rs'][1],
             sources: [{
               src: data['rs'][0],

@@ -1,7 +1,8 @@
 # -- coding: utf-8 --
 import web
 import json,sys
-import sqlite3,datetime
+import sqlite3
+from datetime import datetime,timedelta
 
 
 urls = ("/registerpy","register",
@@ -57,7 +58,8 @@ class olexam:
             data = web.data()
             postData = json.loads(data)
             result = []
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            # time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            time = (datetime.utcnow()+timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')#鬼子时间换成中国时间
             for i in range(len(postData)-1):
                 result.append((postData[i]['value'],time,postData[len(postData)-1]['userid'],postData[i]['name']))
 
@@ -128,7 +130,7 @@ class review:
             cr = con.cursor()
             cr.execute('select max(id) from level_review')
             maxid = cr.fetchone()[0]
-            time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            time = (datetime.utcnow()+timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')#鬼子时间换成中国时间
             # print (maxid+1,t['user_id'],t['review'],time,t['resource_id'])
             cr.execute('insert into level_review values (?,?,?,?,?)',(maxid+1,t['user_id'],t['review'],time,t['resource_id']))
             con.commit()
