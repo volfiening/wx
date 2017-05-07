@@ -1,7 +1,5 @@
 // Initialize your app
-var myApp = new Framework7({
-  pushState: true
-});
+var myApp = new Framework7();
 
 
 
@@ -228,7 +226,8 @@ $$(document).on('pageInit', function(e) {
       if (typeof(Storage) !== "undefined") {
 
         //计数
-        var count = 0
+        var count = 0;
+        var time = 0;
         //读取题目再加载
         //ajax请求
         $.get({
@@ -256,6 +255,8 @@ $$(document).on('pageInit', function(e) {
             // alert(outer);
             count = data.length;
             $("#count").text("本次测试：总计" + count + "道题");
+            $(".time").text(data[0][4]);
+            time = data[0][4];
             $("#exam-form").html(outer);
             //-------------------读取后台题库到前台生成html结束
 
@@ -267,7 +268,7 @@ $$(document).on('pageInit', function(e) {
         $(".content-block.examblock").fadeOut('fast');
         //倒计时函数
         var count = $$('.time').html();
-        var time = Number(count);
+      //  var time = Number(count);
 
         function cal() {
           time -= 1;
@@ -291,7 +292,7 @@ $$(document).on('pageInit', function(e) {
             myApp.alert("请登录来测试", '');
           } else {
             // myApp.alert(getCookie('username'),'');
-            $$(".time").html('还剩下:' + count + '分钟');
+            $$(".time").html('还剩下:' + time + '分钟');
             $(".label").hide('500');
             $("#start").hide('500');
             $(".toolbar-inner").hide('500');
@@ -312,7 +313,7 @@ $$(document).on('pageInit', function(e) {
 
           var input = $("input:radio:checked")
           if (count != input.length) {
-            myApp.alert("有未答之题,全部做完再提交");
+            myApp.alert("有未答之题,全部做完再提交",'');
           }
           else {
             var postData = JSON.stringify($("#exam-form").serializeArray());
@@ -337,10 +338,10 @@ $$(document).on('pageInit', function(e) {
         // 提交按钮动作
         $$('#submit').on('click', function(e) {
           myApp.confirm('确定提交？', '警告', function() {
-            clearInterval(timer);
+            // clearInterval(timer);
             var input = $("input:radio:checked")
             if (count != input.length) {
-              myApp.alert("有未答之题,全部做完再提交");
+              myApp.alert("有未答之题,全部做完再提交",'');
             }
             else {
               var postData = JSON.stringify($("#exam-form").serializeArray());

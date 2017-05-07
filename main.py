@@ -41,7 +41,7 @@ class olexam:
         try:
             con = sqlite3.connect('static/db/enjoyo2o')
             cr = con.cursor()
-            cr.execute("select id,subject,tag,candidate from exam")
+            cr.execute("select id,subject,tag,candidate,deadline from exam")
             data = cr.fetchall()
             # print data
             return json.dumps(data)
