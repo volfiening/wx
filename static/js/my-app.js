@@ -179,7 +179,7 @@ $$(document).on('pageInit', function(e) {
           myApp.alert("开始时间不得大于结束时间","");
         }
         else if(getCookie('username') === '') {
-          myApp.alert('请登录来查询错题');
+          myApp.alert('请登录来查询错题','');
         }
         else {
           //开始查询错题
@@ -191,21 +191,30 @@ $$(document).on('pageInit', function(e) {
             success: function(data) {
               //处理返回的数据
               // myApp.alert(JSON.stringify(data));
-              var outer = '';
-              var inner = '';
 
-              for (var i =0;i<data.length;i++) {
-                outer = outer + '<div><p class="question">'+ data[i][0] + '</p></div>' +
-                  '<div class="candidate">';
-                candidate = data[i][1].split(",");
-                for(var k = 0;k < candidate.length;k++) {
-                  inner = inner + '<input type="radio" value="' + candidate[k] + '"><span>' + candidate[k] + '</span>';
-                }
-                outer = outer + inner + '</div>'+'<div class="candidate error"><span>你的回答：</span><span>'+data[i][3]+'</span></div>'
-                        +'<div class="candidate right"><span>正确答案：</span><span>'+data[i][2]+'</span></div>';
-                inner = "";
+              if (data.length === 0) {
+                myApp.alert('没有错题','');
               }
-              $(".errorblock").html(outer);
+              else {
+                var outer = '';
+                var inner = '';
+
+                for (var i =0;i<data.length;i++) {
+                  outer = outer + '<div><p class="question">'+ data[i][0] + '</p></div>' +
+                    '<div class="candidate">';
+                  candidate = data[i][1].split(",");
+                  for(var k = 0;k < candidate.length;k++) {
+                    inner = inner + '<input type="radio" value="' + candidate[k] + '"><span>' + candidate[k] + '</span>';
+                  }
+                  outer = outer + inner + '</div>'+'<div class="candidate error"><span>你的回答：</span><span>'+data[i][3]+'</span></div>'
+                          +'<div class="candidate right"><span>正确答案：</span><span>'+data[i][2]+
+                          '</span><span>作答时间：</span><span>'
+                          +data[i][4]+'</span></div>';
+                  inner = "";
+                }
+                $("div.errorblock").html(outer);
+              }
+
             }
           });
         }

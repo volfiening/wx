@@ -85,7 +85,7 @@ class errorset:
         try:
             con = sqlite3.connect('static/db/enjoyo2o')
             cr = con.cursor()
-            cr.execute('''select subject,candidate,real_result,answer_result
+            cr.execute('''select subject,candidate,real_result,answer_result,time
                             from archive_error
                            where CAST(replace(substr(time,1,10),'-','') as integer) >=?
                            and CAST(replace(substr(time,1,10),'-','') as integer) <= ?
