@@ -89,3 +89,7 @@ text-align: left;
 /*.item-content {
   background-color: red;
 }*/
+
+p.second {
+  padding-left: 1em;
+}
